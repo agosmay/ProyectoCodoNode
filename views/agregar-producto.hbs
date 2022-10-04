@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   {{>head}}
+  </head>
+  <body>
+  {{>nav}}
+    <h1>Agregar Producto</h1>
+	<form action="/agregar-producto" method="POST">
+	<div class="mb-3">
+  <label for="nombre" class="form-label">Nombre producto</label>
+  <input type="text" class="form-control" id="nombre" name="nombre">
+</div>
+<div class="mb-3">
+  <label for="precio" class="form-label">Precio producto</label>
+  <input type="number" class="form-control" id="precio" name="precio">
+</div>
+<div class="mb-3">
+  <label for="descripcion" class="form-label">Descripcion producto</label>
+  <input type="text" class="form-control" id="descripcion" name="descripcion">
+</div>
+<button type="submit">Agregar Producto</button>
+<a href="/"><button type="button">Cancelar</button></a>
+</form>
+  </body>
+</html>

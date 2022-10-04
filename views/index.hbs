@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{>head}}
+	<link href="index.css" rel="stylesheet">
+  </head>
+  <body>
+  {{>nav}}
+    <h1>Hola desde el INICIO</h1>
+<div class="contenedor-card">
+	{{#each data}}
+		<div class="card" style="width: 18rem;">
+  <img src={{url_imagen}} class="card-img-top" alt="una bicicleta">
+  <div class="card-body">
+    <h5 class="card-title">{{nombre}}</h5>
+	<p class="card-text">{{precio}}</p>
+    <p class="card-text">{{descripcion}}</p>
+    <button type="button" class="btn btn-info" id="boton" data-bs-toggle="modal" data-bs-target="#exampleModal">Medios de pago</button>
+	
+  </div>
+</div>
+
+	{{/each}}
+	</div>
+	
+
+	<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Medios de pago:</h5>
+       
+      </div>
+      <div class="modal-body">
+       <p>Tarjetas de credito, de debito, Efectivo, en cuotas sin interes</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+

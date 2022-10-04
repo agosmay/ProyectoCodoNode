@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   {{>head}}
+  </head>
+  <body>
+	{{>nav}}
+    <h1>Productos</h1>	
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nombre Producto</th>
+      <th scope="col">Precio Producto</th>
+	  <th scope="col">Descripcion Producto</th>
+	  <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each data}}
+    <tr>
+      <td>{{nombre}}</td>
+      <td>{{precio}}</td>
+	  <td>{{descripcion}}</td>
+	  <td>
+	  <a href="/editar-producto/{{id}}"><button type="button">Editar</button></a>
+      <a href="/borrar-producto/{{id}}"><button type="button">Eliminar</button></a>
+	 </td>
+    </tr>
+	{{/each}}
+  </tbody>
+</table>
+<a href="/agregar-producto"><button type="button">Agregar Producto</button></a>
+  </body>
+</html>
+  

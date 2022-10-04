@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{>head}}
+  </head>
+  <body>
+  {{>nav}}
+    <h1>Pagina de Contacto</h1>
+	
+
+	{{#if mensajeError}}
+	<div class="alert alert-danger" role="alert">
+  {{mensajeError}}
+</div>
+{{/if}}
+
+{{#if mensajeExito}}
+<div class="alert alert-info" role="alert">
+ {{mensajeExito}}
+</div>
+{{/if}}
+
+	<form action="/contacto" method="POST">
+	<div class="mb-3">
+  <label for="email" class="form-label">Email</label>
+  <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+</div>
+<div class="mb-3">
+  <label for="asunto" class="form-label">Asunto</label>
+  <input type="text" class="form-control" id="asunto" name="asunto">
+</div>
+<div class="mb-3">
+  <label for="comentarios" class="form-label">Comentarios</label>
+  <textarea class="form-control" id="comentarios" rows="3" name="comentarios"></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+  </body>
+</html>

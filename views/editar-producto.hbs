@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   {{>head}}
+  </head>
+  <body>
+	{{>nav}}
+    <h1>Editar Producto</h1>
+	<form action="/editar-producto/{{data.id}}" method="POST">
+	<div>
+  <label for="nombre">Nombre producto:</label>
+  <input type="text" id="nombre" value={{data.nombre}} name="nombre">
+</div>
+<div>
+  <label for="precio">Precio producto:</label>
+  <input type="number" id="precio" value={{data.precio}} name="precio">
+</div>
+<div>
+  <label for="descripcion">Descripcion producto: </label>
+  <input type="text"  id="descripcion" value={{data.descripcion}} name="descripcion">
+</div>
+<button type="submit">Editar Producto</button>
+<a href="/"><button type="button">Cancelar</button></a>
+</form>
+  </body>
+</html>
